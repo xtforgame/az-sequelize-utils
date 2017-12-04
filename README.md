@@ -1,6 +1,6 @@
-# AzDevBase
+# AzRdbmsOrm
 
-A general purpose seed project base
+A customized api for sequelize
 
 Run `npm install`
 

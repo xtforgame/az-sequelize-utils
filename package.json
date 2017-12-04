@@ -1,7 +1,7 @@
 {
-  "name": "az-dev-base",
-  "version": "1.0.0",
-  "description": "A general purpose seed project base",
+  "name": "az-rdbms-orm",
+  "version": "0.1.0",
+  "description": "az-rdbms-orm",
   "main": "dist/library/index.js",
   "repository": {
     "type": "git"
