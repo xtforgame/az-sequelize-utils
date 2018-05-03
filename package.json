@@ -1,7 +1,7 @@
 {
-  "name": "az-rdbms-orm",
+  "name": "az-sequelize-utils",
   "version": "0.1.0",
-  "description": "az-rdbms-orm",
+  "description": "az-sequelize-utils",
   "main": "dist/library/index.js",
   "repository": {
     "type": "git"
@@ -21,13 +21,17 @@
     "build": "cross-env NODE_ENV=production gulp library:build",
     "start": "cross-env NODE_ENV=development gulp library:watch:dev",
     "test": "eslint ./test/library && cross-env NODE_ENV=test mocha --compilers js:babel-core/register './test/library/**/*.spec.js'",
-    "test-watch": "eslint ./test/library && cross-env NODE_ENV=test mocha --watch ./test --watch-extensions js,jsx --compilers js:babel-core/register './test/library/**/*.spec.js'"
+    "test-watch": "eslint ./test/library && cross-env NODE_ENV=test mocha --watch ./test --watch-extensions js,jsx --compilers js:babel-core/register './test/library/**/*.spec.js'",
+    "start-db": "docker-compose -f dev.yml up -d",
+    "stop-db": "docker-compose -f dev.yml down"
   },
   "license": "MIT",
   "engines": {
     "node": ">=7.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "json-pointer": "^0.6.0"
+  },
   "devDependencies": {
     "az-gulp-env-lite": "git+https://github.com/xtforgame/az-gulp-env-lite#v1.0.0-alpha.1",
     "babel-core": "^6.14.0",
@@ -46,8 +50,13 @@
     "eslint-plugin-react": "^6.9.0",
     "gulp": "^4.0.0",
     "mocha": "^3.0.2",
+    "pg": "^7.4.0",
     "rimraf": "^2.5.4",
-    "sinon": "^4.3.0"
+    "sinon": "^4.3.0",
+    "sequelize": "^4.26.0"
+  },
+  "peerDependencies": {
+    "sequelize": ">=4.26.0"
   },
   "false": {}
 }

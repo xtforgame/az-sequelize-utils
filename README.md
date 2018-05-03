@@ -1,6 +1,6 @@
-# AzRdbmsOrm
+# AzSequelizeUtils
 
-A customized api for sequelize
+Sequelize utils
 
 Run `npm install`
 
