@@ -42,6 +42,7 @@ class AzRdbmsMgr {
     this.sequelizeDb = new Sequelize(getConnectString(postgresUser), {
       dialect: 'postgres',
       logging: databaseLogger,
+      minifyAliases: true,
       define: {
         defaultScope: {
           attributes: {

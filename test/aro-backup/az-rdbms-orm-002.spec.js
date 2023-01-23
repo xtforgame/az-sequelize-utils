@@ -39,6 +39,7 @@ class AzRdbmsMgr {
     this.sequelizeDb = new Sequelize(getConnectString(postgresUser), {
       dialect: 'postgres',
       logging: databaseLogger,
+      minifyAliases: true,
     });
 
     this.azRdbmsOrm = new AzRdbmsOrm(this.sequelizeDb, this.aroModelDefs);

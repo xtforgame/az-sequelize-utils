@@ -38,6 +38,7 @@ class SequelizeC1 {
     this.database = new Sequelize(getConnectString(postgresUser), {
       dialect: 'postgres',
       logging: databaseLogger,
+      minifyAliases: true,
     });
 
     this.userTable = this.database.define('users', 
@@ -76,6 +77,7 @@ class SequelizeC2 {
     this.database = new Sequelize(getConnectString(postgresUser), {
       dialect: 'postgres',
       logging: databaseLogger,
+      minifyAliases: true,
     });
 
     this.userTable = this.database.define('users', 

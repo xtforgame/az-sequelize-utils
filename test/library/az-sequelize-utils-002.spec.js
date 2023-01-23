@@ -42,6 +42,7 @@ class AzRdbmsMgr {
     this.sequelizeDb = new Sequelize(getConnectString(postgresUser), {
       dialect: 'postgres',
       logging: databaseLogger,
+      minifyAliases: true,
       define: {
         defaultScope: {
           attributes: {
@@ -64,7 +65,6 @@ class AzRdbmsMgr {
 }
 
 describe('AsuOrm test', function(){
-
   describe('Basic', function(){
     let asuMgr = null;
     beforeEach(function() {
